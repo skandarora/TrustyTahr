@@ -1,0 +1,25 @@
+SETUP ECLIPSE
+
+1. download eclipse.tar.gz file
+2. Extract it: tar zxvf <fileName>
+3. Put the extracted folder in /opt/
+
+4. Create a launcher shortcut for Eclipse
+
+Press Ctrl+Alt+T, paste below command into the terminal and hit enter (install gksu from Software Center if below command does not work).
+
+gksudo gedit /usr/share/applications/eclipse.desktop
+Above command will create and open the launcher file for eclipse with gedit text editor.
+
+Paste below content into the opened file and save it.
+
+[Desktop Entry]
+Name=Eclipse 4
+Type=Application
+Exec=/opt/eclipse/eclipse
+Terminal=false
+Icon=/opt/eclipse/icon.xpm
+Comment=Integrated Development Environment
+NoDisplay=false
+Categories=Development;IDE;
+Name[en]=Eclipse

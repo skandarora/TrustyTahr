@@ -1,0 +1,22 @@
+Q. Grub not showing windows 7?
+
+A. sudo update-grub
+
+Q Grub menu invisible?
+
+A.
+
+sudo gedit /etc/default/grub
+
+And change:
+
+GRUB_HIDDEN_TIMEOUT=0
+GRUB_HIDDEN_TIMEOUT_QUIET=true
+to:
+
+GRUB_HIDDEN_TIMEOUT=10
+GRUB_HIDDEN_TIMEOUT_QUIET=false
+
+And,
+
+update grub

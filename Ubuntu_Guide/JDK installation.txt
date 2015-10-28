@@ -1,0 +1,25 @@
+#Setting up JDK on Ubuntu
+
+1. Download jdk zip file (tarball i.e tar.gz)
+2. Unzip it : tar -zxvf <FileName>
+3. Make a folder named "java" in usr/lib/ : sudo mkdir java
+4. Move extracted file to this java folder: sudo mv <jdk-file> /usr/lib/java
+5. Update your java laternatives using below scripts
+sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/java/jdk1.8.0_60/bin/java­" 1
+sudo update-alternatives --install "/usr/bin/javac" "javac" "/usr/lib/java/jdk1.8.0_60/bin/java­c" 1
+sudo update-alternatives --install "/usr/bin/javaws" "javaws" "/usr/lib/java/jdk1.8.0_60/bin/java­ws" 1
+
+6. Open bashrc file: sudo gedit ~/.bashrc
+
+7. In the bashrc file enter the java path 
+
+update the JAVA_HOME in your ~/.bashrc
+export JAVA_HOME=/usr/lib/java/jdk1.7.0_65
+export PATH="$PATH:$JAVA_HOME/bin"
+
+
+8. Close the terminal and open a new one to check if its working: 
+
+java
+javac
+java -version 

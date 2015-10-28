@@ -1,0 +1,4 @@
+tar.gz filie -----> tar -zxvf <ZipFile>
+
+tar.gz filie -----> unzip file.zip -d destination_folder
+

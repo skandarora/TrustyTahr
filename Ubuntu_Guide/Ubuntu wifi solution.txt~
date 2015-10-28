@@ -1,0 +1,23 @@
+~$ lspci -vvnn | grep 14e4
+
+
+Driver - Card/Model
+
+STA - BCM4311, BCM4312, BCM4313, BCM4321, BCM4322, BCM43224, BCM43225, **BCM43227, **BCM43228
+sudo apt-get update
+sudo apt-get install bcmwl-kernel-source
+
+b43 - BCM4306/3, BCM4311, BCM4312, BCM4318, BCM4320
+sudo apt-get install b43-fwcutter
+sudo apt-get install firmware-b43legacy-installer
+sudo modprobe -r b43 ssb wl
+sudo modprobe b43
+
+
+DESCRIPTION:
+lspci  is  a  utility for displaying information about PCI buses (local computer bus for attaching hardware devices in a computer. PCI is the initialism for Peripheral Component Interconnect)in the system and devices connected to them. 
+
+By default, it shows a brief list of devices. Use the options described below  to  request  either a more verbose output or output intended for parsing by other programs.
+
+
+More info: http://manpages.ubuntu.com/manpages/raring/man8/lspci.8.html 
